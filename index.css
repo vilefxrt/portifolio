@@ -1,0 +1,43 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #111; /* fundo escuro */
+    color: #fff; /* texto branco */
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;    /* centraliza vertical */
+    height: 100vh;          /* ocupa toda a altura da tela */
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 180px; /* tamanho grande como na imagem */
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: -3px; /* opcional, para aproximar as letras */
+  }
+
+  h3 {
+    font-size: 40px;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  h4{
+    font-size: 20px;
+    margin-top: -30px;
+  }
+
+  p{
+    font-size: 14px;
+    max-width: 600px;
+    background-color: green;
+    
+  }

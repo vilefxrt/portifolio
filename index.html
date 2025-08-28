@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Portfolio</title>
+<link rel="stylesheet" href="index.css">
+<script>
+    function atualizarDataHora(){
+        const agora= new Date();
+        const dataHoraFormatada=agora.toLocaleStribg("pt-br");
+        document.getElementById("data-hora").textContent = dataHoraFormatada;   
+    }
+</script>
+</head>
+<body>
+  <div class="container">
+    <h2>PORTFOLIO</h2>
+    <h3>VICTOR VILEFORT</h3>
+    <h4>Full Stack Developer</h4>
+    <p1><a href="aboutme.html">ABOUT ME</a>, <a href="skills.html">SKILLS</a>, <a href="contacts.html">CONTATOS</a>, <a href="">DOWNLOAD CV</a></p><!--BOTÕES-->
+  </div>   
+
+  <div id="data-hora"></div>
+</body>
+</html>
