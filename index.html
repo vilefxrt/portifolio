@@ -1,28 +1,247 @@
+'
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Portfolio</title>
-<link rel="stylesheet" href="index.css">
-<script>
-    function atualizarDataHora(){
-        const agora= new Date();
-        const dataHoraFormatada=agora.toLocaleStribg("pt-br");
-        document.getElementById("data-hora").textContent = dataHoraFormatada;   
-    }
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portifólio de Victor Vilefort</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <div class="container">
-    <h2>PORTFOLIO</h2>
-    <h3>VICTOR VILEFORT</h3>
-    <h4>Full Stack Developer</h4>
-    <p1><a href="aboutme.html">ABOUT ME</a>, <a href="skills.html">SKILLS</a>, <a href="contacts.html">CONTATOS</a>, <a href="">DOWNLOAD CV</a></p><!--BOTÕES-->
-      <p2>Testando a integração Git, GitHub e VSCode</p2>
-  </div>   
 
-  <div id="data-hora"></div>
+  <header class="header">
+    <nav class="nav">
+
+      <a href="#" class="logo">VICTOR VILEFORT</a>
+      <ul class="nav-links">
+        <li><a href="#about">SOBRE</a></li>
+        <li><a href="#projetos">PROJETOS</a></li>
+        <li><a href="#certificados">CERTIFICADOS</a></li>
+        <li><a href="#contatos">CONTATOS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="hero" id="about">
+    <div class="hero-container">
+      <div class="hero-content">
+
+        <h1 class="hero-title">FULL STACK<br>DEVELOPER</h1>
+        <strong>
+          <p class="hero-subtitle">Olá, Seja bem-vindo ao meu portifólio! Meu nome é Victor Vilefort Saldanha, tenho 17
+            anos e sou apaixonado por tecnologia.</p>
+        </strong>
+        <a href="#projetos" class="hero-cta">VER PROJETOS</a>
+      </div>
+      <div class="hero-image">
+
+        <img src="imagens/fotoport.jpg" alt="Foto Victor Vilefort" />
+      </div>
+    </div>
+  </section>
+
+
+  <main class="main-content">
+
+    <section class="section" id="about_me">
+      <h2 class="section-title">SOBRE MIM</h2>
+      <div class="services-grid">
+        <div class="service-card">
+
+          <strong>
+            <p>Meu nome é Victor Vilefort Saldanha, tenho 17 anos e estou concluindo o Ensino Médio. Sou apaixonado por
+              tecnologia e estou me preparando para ingressar na faculdade na área de desenvolvimento de software.</p>
+            <p>Tenho buscado constantemente aprender por meio de cursos online, sempre com o objetivo de expandir meu
+              conhecimento e me tornar um profissional qualificado na área de desenvolvimento full stack.</p>
+          </strong>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="projetos">
+      <h2 class="section-title">PROJETOS</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">Projeto Web</h3>
+            <strong>
+              <p class="portfolio-description">Aqui você encontrará alguns dos meus projetos desenvolvidos ao longo dos
+                meus estudos e práticas.</p>
+            </strong>
+            <div class="portfolio-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section" id="certificados">
+      <h2 class="section-title">CERTIFICADOS</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>CERTIFICAÇÕES</h3>
+          <strong>
+            <p>Aqui estão alguns dos certificados que obtive durante minha jornada de aprendizado em desenvolvimento de
+              software e tecnologias relacionadas.</p>
+          </strong>
+
+          <!-- Carousel Container -->
+          <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <div class="carousel-slide active">
+                <img src="certificados/certificado py santander.jpg" alt="Certificado Python Santander">
+                <div class="certificate-info">
+                  <h4>Python - Santander</h4>
+                  <p>Certificação em desenvolvimento Python</p>
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <img src="certificados/certificado senai 1.jpg" alt="Certificado SENAI 1">
+                <div class="certificate-info">
+                  <h4>SENAI - Competência Transversal - <br>Tecnologia da Informação e Comunicação</br></h4>
+                  <p>Certificação técnica SENAI</p>
+                </div>
+              </div>
+              <div class="carousel-slide">
+                <img src="certificados/certificado senai.jpg" alt="Certificado SENAI Lógicas de programação">
+                <div class="certificate-info">
+                  <h4>SENAI - Competência Transversal - Lógicas de Programação</h4>
+                  <p>Certificação técnica SENAI</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="carousel-btn carousel-prev" onclick="changeSlide(-1)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="carousel-btn carousel-next" onclick="changeSlide(1)">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <!-- Dots Indicator -->
+            <div class="carousel-dots">
+              <span class="dot active" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="contatos">
+      <h2 class="section-title">CONTATOS
+      </h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>ENTRE EM CONTATO</h3>
+          <strong>
+            <p>Vamos conversar sobre oportunidades e projetos!</p>
+          </strong>
+
+          <strong>
+            <ul style="list-style: none; padding: 0; margin-top: 2rem;">
+              <li style="margin-bottom: 1rem;"><a href="mailto:victorvilefort11@gmail.com"
+                  style="color: var(--brand-purple); text-decoration: none; font-weight: 600;">📧 Enviar e-mail</a></li>
+              <li style="margin-bottom: 1rem;"><a href="https://wa.me/5511932203551" target="_blank" rel="external"
+                  style="color: var(--brand-purple); text-decoration: none; font-weight: 600;">📱 Me chame no
+                  WhatsApp!</a></li>
+              <li style="margin-bottom: 1rem;"><a href="https://www.linkedin.com/in/victor-v-b3319b37a/" target="_blank"
+                  style="color: var(--brand-purple); text-decoration: none; font-weight: 600;">💼 Linkedin</a></li>
+              <li style="margin-bottom: 1rem;"><a href="https://github.com/vilefxrt" target="_blank"
+                  style="color: var(--brand-purple); text-decoration: none; font-weight: 600;">🐙 GitHub</a></li>
+            </ul>
+          </strong>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+
+    <section class="section" id="download_cv">
+      <h2 class="section-title">DOWNLOAD CV</h2>
+      <div class="services-grid">
+        <div class="service-card" style="text-align: center;">
+
+          <h3>Currículo</h3>
+          <p>Baixe meu currículo completo para mais informações sobre minha experiência e habilidades.</p>
+          <a href="CV/VICTOR VILEFORT CV.pdf" download target="_blank" rel="external" class="hero-cta"
+            style="margin-top: 1rem;">DOWNLOAD CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Show current slide
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+      currentSlideIndex += direction;
+
+      if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+      } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+
+      showSlide(currentSlideIndex);
+    }
+
+    function currentSlide(index) {
+      currentSlideIndex = index - 1;
+      showSlide(currentSlideIndex);
+    }
+
+    // Auto-play carousel (optional)
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+  </script>
 </body>
-</html>
 
+</html>
